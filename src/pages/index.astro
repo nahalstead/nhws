@@ -7,28 +7,39 @@
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="stylesheet" href="/src/styles/global.css" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>NHWS</title>
 	</head>
 	<body class="dark">
-		<header>
-			<h1>NHWS</h1>
-			<nav>
-				<a href="/projects">Projects</a>
-			</nav>
+		<header class="grid grid-cols-8 gap-x-4 m-4">
+			<div class="col-span-2 border-b-1 pb-4 border-b-mist-700">
+				<h1>NHWS</h1>
+			</div>
+			<div class="col-span-2 border-b-1 pb-4 border-b-mist-700">
+				<nav>
+					<a href="/projects">Projects</a>
+				</nav>
+			</div>
 		</header>
 		<main>
-			<h2>Freelance web developer with a focus on improving accessibility.</h2>
-			<ul>
-				<li>CMS specialist since 2008</li>
-				<li>Lead developer on 100s of projects</li>
-				<li>Digital accessibility specialist</li>
-			</ul>
-			<p>Recent work has focused on auditing and remediating accessibility issues in CMS-based websites, improving WCAG compliance and overall user experience.</p>
+			<div class="container grid grid-cols-8 gap-x-4 m-4">
+				<div class="col-span-4">
+				<h2>Freelance web developer with a focus on improving accessibility.</h2>
+				<ul role="list" class="list-inside list-disc">
+					<li>CMS specialist since 2008</li>
+					<li>Lead developer on 100s of projects</li>
+					<li>Digital accessibility specialist</li>
+				</ul>
+				<p>Recent work has focused on auditing and remediating accessibility issues in CMS-based websites, improving WCAG compliance and overall user experience.</p>
+			</div>
+		</div>
 		</main>
-		<footer>
-			<p>&copy; 2026 NHWS. All rights reserved.</p>
+		<footer class="grid grid-cols-8 gap-x-4 m-4">
+			<div class="col-span-4">
+				<p>&copy; 2026 NHWS. All rights reserved.</p>
+			</div>
 		</footer>
 	</body>
 </html>

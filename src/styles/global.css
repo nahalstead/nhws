@@ -3,6 +3,7 @@
 body.dark {
     --background-1: #141414;
     --text-1: #e5e5e5;
+    --grid-column-gap: 40px;
 }
 body {
     background-color: var(--background-1);
