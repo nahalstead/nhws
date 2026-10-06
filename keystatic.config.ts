@@ -7,7 +7,7 @@ export default config({
   },
   collections: {
     posts: collection({
-      label: 'Posts',
+      label: 'Projects',
       slugField: 'title',
       path: 'src/content/projects/*',
       format: { contentField: 'content' },
