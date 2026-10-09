@@ -1,0 +1,30 @@
+$ astro dev
+[2m17:55:56[22m [34m[@astrojs/netlify][39m Enabling sessions with Netlify Blobs
+[2m17:55:58[22m [34m[vite][39m connected.
+[2m17:56:21[22m [34m[vite][39m Environment loaded
+[2m17:56:21[22m [34m[vite][39m Middleware loaded. Emulating features: aiGateway, blobs, database, edgeFunctions, functions, geolocation, headers, images, redirects, static.
+[2m17:56:21[22m [34m[vite][39m 💭 Linking this project to a Netlify site lets you deploy your site, use any environment variables defined on your team and site and much more. Run npx netlify init to get started.
+[2m17:56:21[22m [34m[types][39m Generated [2m12ms[22m
+[0m[1m[31merror[0m: unexpected argument '--allow-scripts' found
+[2m17:56:31[22m [34m[vite][39m connected.
+[2m17:56:32[22m [34m[content][39m Syncing content
+[33m[1m17:56:32[22m [WARN] [glob-loader][39m No files found matching "pages/**/index.mdoc" in directory "src\content"
+[2m17:56:32[22m [34m[content][39m Synced content
+[2m17:56:33[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[42m[1m astro [22m[49m [32mv7.3.5[39m [2mready in[22m 44591 [2mms[22m
+[2m┃[22m Local    [36mhttp://127.0.0.1:4321/[39m
+[2m17:56:34[22m [32mwatching for file changes...[39m
+[2m17:56:35[22m [34m[vite][39m [optimizer] bundling dependencies...
+[31m[1m17:57:23[22m [ERROR][39m [31m[UnhandledRejection][39m Astro detected an unhandled rejection. Here's the stack trace:
+Error: Could not establish a connection to the Netlify Edge Functions local development server
+    at EdgeFunctionsHandler.waitForDenoServer (file:///C:/Users/Nick/astro/nhws/node_modules/.pnpm/@netlify+edge-functions-dev@2.0.3/node_modules/@netlify/edge-functions-dev/dist/node/main.js:317:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async EdgeFunctionsHandler.initialize (file:///C:/Users/Nick/astro/nhws/node_modules/.pnpm/@netlify+edge-functions-dev@2.0.3/node_modules/@netlify/edge-functions-dev/dist/node/main.js:277:7)
+  [1mHint:[22m
+[33m    Make sure your promises all have an `await` or a `.catch()` handler.[39m
+  [1mError reference:[22m
+    [36m[4mhttps://docs.astro.build/en/reference/errors/unhandled-rejection/[24m[39m
+  [1mStack trace:[22m
+[2m    at C:\Users\Nick\astro\nhws\node_modules\.pnpm\@netlify+edge-functions-dev@2.0.3\node_modules\@netlify\edge-functions-dev\dist\node\main.js:317:15
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[ELIFECYCLE] Command failed with exit code 1.
