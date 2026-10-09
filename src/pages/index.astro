@@ -1,5 +1,6 @@
 ---
-
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -14,12 +15,12 @@
 	</head>
 	<body class="dark">
 		<header class="grid grid-cols-8 gap-x-4 m-4">
-			<div class="col-span-2 border-b-1 pb-4 border-b-mist-700">
+			<div class="col-span-2 border-b border-b-mist-700 pb-4">
 				<h1>NHWS</h1>
 			</div>
-			<div class="col-span-2 border-b-1 pb-4 border-b-mist-700">
+			<div class="col-span-2 border-b border-b-mist-700 pb-4">
 				<nav>
-					<a href="/projects">Projects</a>
+					<Navigation />
 				</nav>
 			</div>
 		</header>
@@ -36,10 +37,6 @@
 			</div>
 		</div>
 		</main>
-		<footer class="grid grid-cols-8 gap-x-4 m-4">
-			<div class="col-span-4">
-				<p>&copy; 2026 NHWS. All rights reserved.</p>
-			</div>
-		</footer>
+		<Footer />
 	</body>
 </html>

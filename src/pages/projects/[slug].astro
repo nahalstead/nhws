@@ -1,0 +1,22 @@
+---
+import { getEntry, render } from 'astro:content';
+
+const slug = Astro.params.slug;
+const project = slug ? await getEntry('projects', slug) : undefined;
+const Content = project ? (await render(project)).Content : undefined;
+
+if (!project) {
+  Astro.response.status = 404;
+}
+---
+
+<main>
+  {project && Content ? (
+    <>
+      <h1>{project.data.title}</h1>
+      <Content />
+    </>
+  ) : (
+    <h1>Project not found</h1>
+  )}
+</main>
