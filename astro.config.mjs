@@ -13,6 +13,11 @@ export default defineConfig({
   output: 'server',
   adapter: netlify({
     edgeMiddleware: false,
+    devFeatures: {
+      edgeFunctions: false,
+      imageCDN: false,
+      blobs: false,
+    },
   }),
   vite: {
     plugins: [tailwindcss()]
