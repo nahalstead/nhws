@@ -11,7 +11,9 @@ import netlify from '@astrojs/netlify';
 export default defineConfig({
   integrations: [react(), markdoc(), keystatic(), netlify()],
   output: 'server',
-  adapter: netlify(),
+  adapter: netlify({
+    edgeMiddleware: false,
+  }),
   vite: {
     plugins: [tailwindcss()]
   }
