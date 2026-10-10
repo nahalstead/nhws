@@ -24,14 +24,18 @@ const projects = (await getCollection('projects'))
 			</div>
 		</header>
 		<main>
-            <ul>
-            {projects.map((project) => (
-                <li>
-                <a href={`/projects/${project.id}`}>{project.data.title}</a>
-                </li>
-            ))}
-            </ul>
-        </main>
+			<div class="container grid grid-cols-8 gap-x-4 m-4">
+				<div class="col-span-4">
+					<ul>
+					{projects.map((project) => (
+						<li>
+						<a href={`/projects/${project.id}`}>{project.data.title}</a>
+						</li>
+					))}
+					</ul>
+				</div>
+			</div>
+		</main>
 		<Footer />
 	</body>
 </html>

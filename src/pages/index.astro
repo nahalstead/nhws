@@ -10,10 +10,10 @@ import Footer from '../components/Footer.astro';
 	</head>
 	<body class="dark">
 		<header class="grid grid-cols-8 gap-x-4 m-4">
-			<div class="col-span-2 border-b border-b-mist-700 pb-4">
+			<div class="col-span-4 md:col-span-2 border-b border-b-mist-700 pb-4">
 				<a href="/"><h1>NHWS</h1></a>
 			</div>
-			<div class="col-span-2 border-b border-b-mist-700 pb-4">
+			<div class="col-span-4 md:col-span-2 border-b border-b-mist-700 pb-4">
 				<nav>
 					<Navigation />
 				</nav>
@@ -21,16 +21,29 @@ import Footer from '../components/Footer.astro';
 		</header>
 		<main>
 			<div class="container grid grid-cols-8 gap-x-4 m-4">
-				<div class="col-span-4">
-				<h2>Freelance web developer with a focus on improving accessibility.</h2>
-				<ul role="list" class="list-inside list-disc">
-					<li>CMS specialist since 2008</li>
-					<li>Lead developer on 100s of projects</li>
-					<li>Digital accessibility specialist</li>
-				</ul>
-				<p>Recent work has focused on auditing and remediating accessibility issues in CMS-based websites, improving WCAG compliance and overall user experience.</p>
+				<div class="md:col-span-2 mt-10">
+					<h2>Freelance web developer with a focus on improving accessibility.</h2>
+					<ul role="list" class="list-inside list-disc mt-5 mb-5">
+						<li>CMS specialist since 2008</li>
+						<li>Lead developer on hundreds of projects</li>
+						<li>Digital accessibility specialist</li>
+					</ul>
+					<p>Recent work has focused on auditing and remediating accessibility issues in CMS-based websites, improving WCAG compliance and overall user experience.</p>
+				</div>
+				<div class="md:col-span-2 mt-10">
+					<h2>Selected Clients</h2>
+					<p><a target="_blank" href="https://www.jameshood.com/">James Hood</a></p>
+					<p><a target="_blank" href="https://www.poseidonmusic.com/">Poseidon Music</a></p>
+					<p><a target="_blank" href="https://offthewallstainedglass.com/">Off The Wall</a></p>
+					<p><a target="_blank" href="https://ebro-expert.com/">Ebro Expert</a></p>
+					<p><a target="_blank" href="https://www.charliehill.org.uk">Charlie Hill</a></p>
+					<p><a target="_blank" href="https://www.mgmoves.co.uk/">MG Moves</a></p>
+					<p><a target="_blank" href="https://www.julianbarnesangling.com/">Julian Barnes</a></p>
+					<p><a target="_blank" href="https://www.butebaptists.org.uk/">Bute Baptists</a></p>
+					<p><a target="_blank" href="https://www.northfieldfestival.org.uk/">Northfield Festival</a></p>
+					<p><a target="_blank" href="https://www.piefingers.net/">Piefingers</a></p>
+				</div>
 			</div>
-		</div>
 		</main>
 		<Footer />
 	</body>
