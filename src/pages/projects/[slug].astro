@@ -29,15 +29,19 @@ if (!project) {
 			</div>
 		</header>
 
-		<main>
-			{project && Content ? (
-				<>
-					<h1>{project.data.title}</h1>
-					<Content />
-				</>
-			) : (
-				<h1>Project not found</h1>
-			)}
+		<main class="pb-16">
+      <div class="content grid grid-cols-8 gap-x-4 m-4">
+        <div class="col-span-8 md:col-span-2 mt-2">
+          {project && Content ? (
+            <>
+              <h1>{project.data.title}</h1>
+              <Content />
+            </>
+          ) : (
+            <h1>Project not found</h1>
+          )}
+        </div>
+      </div>
 		</main>
 		<Footer />
 	</body>
