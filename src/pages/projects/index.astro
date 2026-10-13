@@ -10,12 +10,12 @@ const projects = (await getCollection('projects'))
 <html lang="en">
 	<head>
 		<Head />
-		<title>Projects / NHWS</title>
+		<title>Projects / Nick Cosmo</title>
 	</head>
 	<body class="dark">
 		<header class="grid grid-cols-8 gap-x-4 m-4">
 			<div class="col-span-2 border-b border-b-mist-700 pb-4">
-				<a href="/">NHWS</a>
+				<a href="/">Nick Cosmo</a>
 			</div>
 			<div class="col-span-2 border-b border-b-mist-700 pb-4">
 				<nav>
@@ -26,13 +26,11 @@ const projects = (await getCollection('projects'))
 		<main class="pb-16">
 			<div class="container grid grid-cols-8 gap-x-4 m-4">
 				<div class="col-span-4">
-					<ul>
 					{projects.map((project) => (
-						<li>
-						<a href={`/projects/${project.id}`}>{project.data.title}</a>
-						</li>
-					))}
-					</ul>
+						<p>
+							<a href={`/projects/${project.id}`}>{project.data.title}</a>
+						</p>
+					))}			
 				</div>
 			</div>
 		</main>
