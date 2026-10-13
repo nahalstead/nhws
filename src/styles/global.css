@@ -10,10 +10,21 @@ body {
     color: var(--text-1);
     font-size: 14px;
 }
-h2 {
+h1, h2 {
     margin-bottom: 1rem;
 }
 .content a {
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--color-mist-700);
+}
+ul {
+    list-style: disc;
+    list-style-position: inside;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
