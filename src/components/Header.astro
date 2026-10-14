@@ -1,0 +1,26 @@
+---
+import Navigation from './Navigation.astro';
+---
+<a href="#main-content" class="skip-link">Skip to main content</a> 
+<header class="grid grid-cols-8 gap-x-4 m-4">
+    <div class="col-span-4 md:col-span-2 border-b border-b-mist-700 pb-4">
+        <a href="/">Nick Cosmo</a>
+    </div>
+    <div class="col-span-4 md:col-span-2 border-b border-b-mist-700 pb-4">
+        <nav>
+            <Navigation />
+        </nav>
+    </div>
+</header>
+<script>
+document.querySelector('.skip-link')?.addEventListener('click', (e) => {
+  e.preventDefault();
+  const href = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
+  if (href) {
+    const target = document.querySelector(href);
+    if (target) {
+      (target as HTMLElement).focus();
+    }
+  }
+});
+</script>

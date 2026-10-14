@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Head from '../../components/Head.astro';
-import Navigation from '../../components/Navigation.astro';
+import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
 const projects = (await getCollection('projects'))
@@ -13,17 +13,8 @@ const projects = (await getCollection('projects'))
 		<title>Projects / Nick Cosmo</title>
 	</head>
 	<body class="dark">
-		<header class="grid grid-cols-8 gap-x-4 m-4">
-			<div class="col-span-2 border-b border-b-mist-700 pb-4">
-				<a href="/">Nick Cosmo</a>
-			</div>
-			<div class="col-span-2 border-b border-b-mist-700 pb-4">
-				<nav>
-					<Navigation />
-				</nav>
-			</div>
-		</header>
-		<main class="pb-16">
+		<Header />
+		<main id="main-content" class="pb-16">
 			<div class="container grid grid-cols-8 gap-x-4 m-4">
 				<div class="col-span-4">
 					{projects.map((project) => (

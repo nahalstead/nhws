@@ -1,7 +1,7 @@
 ---
 import { getEntry, render } from 'astro:content';
 import Head from '../../components/Head.astro';
-import Navigation from '../../components/Navigation.astro';
+import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
 const slug = Astro.params.slug;
@@ -15,34 +15,24 @@ if (!project) {
 <html lang="en">
 	<head>
 		<Head />
-		<title>{project ? project.data.title : 'Project not found'} / NHWS</title>
+		<title>{project ? project.data.title : 'Project not found'} / Nick Cosmo</title>
 	</head>
 	<body class="dark">
-		<header class="grid grid-cols-8 gap-x-4 m-4">
-			<div class="col-span-2 border-b border-b-mist-700 pb-4">
-				<a href="/">NHWS</a>
-			</div>
-			<div class="col-span-2 border-b border-b-mist-700 pb-4">
-				<nav>
-					<Navigation />
-				</nav>
-			</div>
-		</header>
-
-		<main class="pb-16">
-      <div class="content grid grid-cols-8 gap-x-4 m-4">
-        <div class="col-span-8 md:col-span-2 mt-2">
-          {project && Content ? (
-            <>
-              <h1>{project.data.title}</h1>
-              <Content />
-            </>
-          ) : (
-            <h1>Project not found</h1>
-          )}
-        </div>
-      </div>
-		</main>
+		<Header />
+			<main id="main-content" class="pb-16">
+				<div class="content grid grid-cols-8 gap-x-4 m-4">
+					<div class="col-span-8 md:col-span-2 mt-2">
+					{project && Content ? (
+						<>
+						<h1>{project.data.title}</h1>
+						<Content />
+						</>
+					) : (
+						<h1>Project not found</h1>
+					)}
+					</div>
+				</div>
+			</main>
 		<Footer />
 	</body>
 </html>

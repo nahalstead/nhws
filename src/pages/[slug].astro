@@ -1,5 +1,8 @@
 ---
 import { getEntry, render } from 'astro:content';
+import Head from '../components/Head.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 const slug = Astro.params.slug;
 const page = slug ? await getEntry('pages', slug) : undefined;
@@ -9,14 +12,27 @@ if (!page) {
   Astro.response.status = 404;
 }
 ---
-
-<main class="pb-16">
-  {page && Content ? (
-    <>
-      <h1>{page.data.title}</h1>
-      <Content />
-    </>
-  ) : (
-    <h1>Page not found</h1>
-  )}
-</main>
+<html lang="en">
+  <head>
+    <Head />
+    <title>{page ? page.data.title : 'Page not found'} / Nick Cosmo</title>
+  </head>
+  <body class="dark">
+    <Header />
+    <main id="main-content" class="pb-16">
+      <div class="content grid grid-cols-8 gap-x-4 m-4">
+					<div class="col-span-8 md:col-span-2 mt-2">
+            {page && Content ? (
+              <>
+                <h1>{page.data.title}</h1>
+                <Content />
+              </>
+            ) : (
+              <h1>Page not found</h1>
+            )}
+          </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

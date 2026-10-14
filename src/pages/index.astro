@@ -1,6 +1,6 @@
 ---
 import Head from '../components/Head.astro';
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -9,17 +9,8 @@ import Footer from '../components/Footer.astro';
 		<Head />
 	</head>
 	<body class="dark">
-		<header class="grid grid-cols-8 gap-x-4 m-4">
-			<div class="col-span-4 md:col-span-2 border-b border-b-mist-700 pb-4">
-				<a href="/">Nick Cosmo</a>
-			</div>
-			<div class="col-span-4 md:col-span-2 border-b border-b-mist-700 pb-4">
-				<nav>
-					<Navigation />
-				</nav>
-			</div>
-		</header>
-		<main class="pb-16">
+		<Header />
+		<main id="main-content" class="pb-16">
 			<div class="content grid grid-cols-8 gap-x-4 m-4">
 				<div class="col-span-8 md:col-span-2 mt-2">
 					<h2>Freelance web developer with a focus on improving accessibility.</h2>
@@ -27,6 +18,8 @@ import Footer from '../components/Footer.astro';
 						<li>CMS specialist since 2008</li>
 						<li>Lead developer on hundreds of projects</li>
 						<li>Digital accessibility specialist</li>
+						<li>Front-end development specialist</li>
+						<li>Project management specialist</li>
 					</ul>
 					<p>Recent work has focused on auditing and remediating accessibility issues in CMS-based websites, improving WCAG compliance and overall user experience.</p>
 					<p>&nbsp;</p>
