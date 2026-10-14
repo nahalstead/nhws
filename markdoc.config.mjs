@@ -1,5 +1,5 @@
 // markdoc.config.mjs
-import { defineMarkdocConfig, nodes } from '@astrojs/markdoc/config';
+import { component, defineMarkdocConfig, nodes } from '@astrojs/markdoc/config';
 
 export default defineMarkdocConfig({
   nodes: {
